@@ -1,4 +1,6 @@
-# GitHub Action using AWS CDK for JavaScript
+# GitHub Action using AWS CDK for Java
+
+Derived from `MikeBild/aws-cdk-js-github-action`
 
 ## How to use?
 
@@ -14,13 +16,8 @@ jobs:
     - name: GitHub Checkout
       uses: actions/checkout@v1
 
-    - name: Yarn Install
-      uses: nuxt/actions-yarn@master
-      with:
-        args: install
-
     - name: AWS CDK Deploy
-      uses: MikeBild/aws-cdk-js-github-action@1.0.0
+      uses: cmsd2/aws-cdk-java-github-action@1.0.0
       with:
         args: deploy
       env:
